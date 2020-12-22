@@ -1,5 +1,6 @@
 class Karrie {
-    constructor () {
+	constructor () {
         
-    }
+	}
 }
+module.exports = new Karrie;
