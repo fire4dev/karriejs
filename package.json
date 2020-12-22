@@ -1,0 +1,33 @@
+{
+  "name": "karriejs",
+  "version": "0.0.1",
+  "description": "a Mobile Legends lib with Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": "https://github.com/fire4dev/karriejs.git",
+  "bugs": {
+    "url": "https://github.com/fire4dev/karriejs/issues"
+  },
+  "homepage": "https://github.com/fire4dev/karriejs#readme",
+  "author": "Fire4Dev",
+  "license": "MIT",
+  "keywords": [
+    "Mobile Legends",
+    "Mobile Legends API",
+    "MLBB API",
+    "Karrie JS",
+    "Karrie Mobile Legends",
+    "Fire4Dev",
+    "MLBB",
+    "Mobile Legends"
+  ],
+  "dependencies": {
+    "superstruct": "^0.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
