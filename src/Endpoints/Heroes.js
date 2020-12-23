@@ -5,29 +5,29 @@ class Heroes {
 	constructor () {
 		this.getAll = this.#all.bind(this);
 		this.by = {
-			id: this.heroID.bind(this)
+			id: this.#heroID.bind(this)
 		}
 	}
 
 	async #all () {
 		try {
 			const { body } = await MAPIRequest(
-				MAPIEnum.HERO_ALL_URL
+				MAPIEnum.createHeroUrl('list', '')
 			);
 			return body;
 		} catch (error) {
-			return Promise.reject(error);
+			throw new Error(`An endpoint error ocurred with the code: ${error.code}`);
 		}
 	}
 
-	async heroID (heroID) {
+	async #heroID (heroID) {
 		try {
 			const { body } = await MAPIRequest(
-				`${HERO_BY_ID_URL}&id=${heroID}`
+				MAPIEnum.createHeroUrl('detail', `id=${heroID}`)
 			);
 			return body;
 		} catch (error) {
-			return Promise.reject(error);
+			throw new Error(`An endpoint error ocurred with the code: ${error.code}`);
 		}
 	}
 }
