@@ -3,13 +3,13 @@ const MAPIEnum = require('../Enums/MAPIEnum');
 
 class Heroes {
 	constructor () {
-		this.getAll = this.all.bind(this);
+		this.getAll = this.#all.bind(this);
 		this.by = {
 			id: this.heroID.bind(this)
 		}
 	}
 
-	async all () {
+	async #all () {
 		try {
 			const { body } = await MAPIRequest(
 				MAPIEnum.HERO_ALL_URL

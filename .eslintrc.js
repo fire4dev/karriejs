@@ -5,8 +5,9 @@ module.exports = {
 		"node": true
 	},
 	"parserOptions": {
-		"ecmaVersion": 12
+		"ecmaVersion": 12,
 	},
+	"parser": "babel-eslint",
 	"rules": {
 		"indent": ["error", "tab"],
 		"class-methods-use-this": "off",
