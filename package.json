@@ -25,6 +25,7 @@
 		"Mobile Legends"
 	],
 	"dependencies": {
+		"got": "^11.8.1",
 		"superstruct": "^0.13.1"
 	},
 	"devDependencies": {
