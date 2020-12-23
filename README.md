@@ -3,7 +3,7 @@ _Node JS library with Mobile Legends API._
 > Installation
 
 ```sh
-	npm i -s karriejs
+	npm i -s karriejs or yarn add karriejs
 ```
 
 > Usage
