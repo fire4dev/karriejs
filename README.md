@@ -1,6 +1,6 @@
 _Node JS library with Mobile Legends API._
 
-## Installation
+# Installation
 
 > NPM
 ```sh
@@ -11,7 +11,7 @@ npm i -s karriejs
 yarn add karriejs
 ```
 
-## Usage
+# Usage
 
 ```javascript
 const Karrie = require('karriejs');
