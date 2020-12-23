@@ -17,5 +17,6 @@ yarn add karriejs
 const Karrie = require('karriejs');
 
 Karrie.Heroes.getAll()
-	.then(res => console.log(res));
+	.then(res => console.log(res))
+	.catch(error => console.log(error));
 ```
