@@ -4,7 +4,7 @@
 	"description": "a Mobile Legends lib with Node JS",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "mocha src/test",
 		"start": "nodemon index.js"
 	},
 	"repository": "https://github.com/fire4dev/karriejs.git",
@@ -25,7 +25,9 @@
 		"Mobile Legends"
 	],
 	"dependencies": {
+		"chai": "^4.2.0",
 		"got": "^11.8.1",
+		"mocha": "^8.2.1",
 		"superstruct": "^0.13.1"
 	},
 	"devDependencies": {

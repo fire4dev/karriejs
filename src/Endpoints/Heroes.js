@@ -2,6 +2,10 @@ const MAPIRequest = require('../Requests/MAPIRequest');
 const MAPIEnum = require('../Enums/MAPIEnum');
 
 class Heroes {
+
+	/**
+	 * @constructor Heroes
+	 */
 	constructor () {
 		this.getAll = this.#all.bind(this);
 		this.by = {
@@ -9,6 +13,11 @@ class Heroes {
 		}
 	}
 
+	/**
+	 * Returns all champions
+	 * @private
+	 * @returns { object }
+	 */
 	async #all () {
 		try {
 			const { body } = await MAPIRequest(
@@ -20,6 +29,12 @@ class Heroes {
 		}
 	}
 
+	/**
+	 * Returns a champion by id
+	 * @private
+	 * @param {string | number} heroID - ID of champion
+	 * @returns { object }
+	 */
 	async #heroID (heroID) {
 		try {
 			const { body } = await MAPIRequest(
