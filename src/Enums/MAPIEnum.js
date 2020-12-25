@@ -5,12 +5,12 @@ const defaultMAPIOptions = {
 }
 
 const defaultUrlCreate = {
-	creteBaseUrl: () => {
+	createBaseUrl: () => {
 		return `${defaultMAPIOptions.BASE_URL}`;
 	},
 
 	createHeroUrl: (action = String, query = String) => {
-		return `${defaultMAPIOptions.HERO_ENDPOINT}${action}?language=${defaultMAPIOptions.LANGUAGE}&${query}`;
+		return `${defaultMAPIOptions.BASE_URL}${defaultMAPIOptions.HERO_ENDPOINT}${action}?language=${defaultMAPIOptions.LANGUAGE}&${query}`;
 	}
 }
 
