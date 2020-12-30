@@ -1,3 +1,5 @@
+const querystring = require('querystring');
+
 const defaultMAPIOptions = {
 	LANGUAGE: 'en',
 	BASE_URL: 'https://mapi.mobilelegends.com/',
@@ -9,8 +11,9 @@ const defaultUrlCreate = {
 		return `${defaultMAPIOptions.BASE_URL}`;
 	},
 
-	createHeroUrl: (action = String, query = String) => {
-		return `${defaultMAPIOptions.BASE_URL}${defaultMAPIOptions.HERO_ENDPOINT}${action}?language=${defaultMAPIOptions.LANGUAGE}&${query}`;
+	createHeroUrl: (action = String, query = Object) => {
+		const queryData = querystring.stringify(query);
+		return `${defaultMAPIOptions.BASE_URL}${defaultMAPIOptions.HERO_ENDPOINT}${action}?language=${defaultMAPIOptions.LANGUAGE}&${queryData}`;
 	}
 }
 

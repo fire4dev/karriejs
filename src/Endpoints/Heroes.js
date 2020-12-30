@@ -42,7 +42,9 @@ class Heroes {
 	async #heroID (heroID = number) {
 		try {
 			const { body } = await MAPIRequest(
-				MAPIEnumHelper.createHeroUrl('detail', `id=${heroID}`)
+				MAPIEnumHelper.createHeroUrl('detail', {
+					id: heroID
+				})
 			);
 			return parseDataHelper(body);
 		} catch (error) {
