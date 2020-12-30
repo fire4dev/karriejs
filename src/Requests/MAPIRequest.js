@@ -1,5 +1,5 @@
 const got = require('got');
-const MAPIEnum = require('../Utils/MAPIEnumHelper');
+const MAPIEnum = require('../Utils/MAPIHelper');
 
 const MAPIRequest = got.extend({
 	baseUrl: MAPIEnum.createBaseUrl(),

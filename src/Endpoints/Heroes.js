@@ -1,5 +1,5 @@
 const MAPIRequest = require('../Requests/MAPIRequest');
-const MAPIEnumHelper = require('../Utils/MAPIEnumHelper');
+const MAPIEnumHelper = require('../Utils/MAPIHelper');
 const parseDataHelper = require('../Utils/parseDataHelper');
 const FormattersHelper = require('../Utils/FormattersHelper');
 const { number } = require('superstruct');
