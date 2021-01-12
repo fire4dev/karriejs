@@ -13,9 +13,10 @@ class Heroes {
 		this.getAll = this.#all.bind(this);
 		this.videos = {
 			by: {
-				id: this.#heroVideosById.bind(this),	
+				id: this.#heroVideosById.bind(this),
 			}
 		};
+		this.freeWeek = this.#freeWeek.bind(this);
 		this.by = {
 			id: this.#heroID.bind(this),
 			name: this.#heroName.bind(this)
@@ -106,6 +107,24 @@ class Heroes {
 				);
 			}
 			return parseDataHelper(response.body);
+		} catch (error) {
+			throw new Error(`An endpoint error ocurred with the code: ${error.code}`);
+		}
+	}
+
+	/**
+ 	* Returns free week champions
+		* @private
+		* @returns { object }
+	*/
+	async #freeWeek () {
+		try {
+			const { body } = await MAPIRequest(
+				MAPIEnumHelper.createAPIUrl('API.php', {
+					url: '%2Ffreehero%2Flist'
+				})
+			);
+			return parseDataHelper(body);
 		} catch (error) {
 			throw new Error(`An endpoint error ocurred with the code: ${error.code}`);
 		}
