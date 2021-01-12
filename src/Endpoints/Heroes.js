@@ -10,23 +10,47 @@ class Heroes {
  		* @constructor Heroes
 	*/
 	constructor () {
+		/**
+		* Returns all champions
+		 	* @returns object
+	 	*/
 		this.getAll = this.#all.bind(this);
 		this.videos = {
 			by: {
+				/**
+				* Returns videos by hero id
+					* @param {string | number} heroID string | number
+					* @param {string | number} contentSize string | number
+					* @param {string | number} page string | number
+					* @param { boolean } withPagination boolean
+					* @returns object
+				*/
 				id: this.#heroVideosById.bind(this),
 			}
 		};
+		/**
+		* Returns all free week champions
+			* @returns object
+		*/
 		this.freeWeek = this.#freeWeek.bind(this);
 		this.by = {
+			/**
+			* Returns a champion by id
+				* @param {string | number} heroID string | number
+				* @returns object
+			*/
 			id: this.#heroID.bind(this),
+			/**
+			* Returns a hero by name
+				* @param { string } heroName string
+				* @returns object
+			*/
 			name: this.#heroName.bind(this)
 		}
 	}
 
 	/**
- 	* Returns all champions
 		* @private
-		* @returns { object }
 	*/
 	async #all () {
 		try {
@@ -40,10 +64,7 @@ class Heroes {
 	}
 
 	/**
- 	* Returns a champion by id
 		* @private
-		* @param {string | number} heroID - ID of champion
-		* @returns { object }
 	*/
 	async #heroID (heroID = Number) {
 		try {
@@ -59,10 +80,7 @@ class Heroes {
 	}
 	
 	/**
- 	* Returns a hero by name
 		* @private
-		* @param { string } heroName - Name of hero
-		* @returns { object }
 	*/
 	async #heroName (heroName = String) {
 		try {
@@ -76,13 +94,7 @@ class Heroes {
 	}
 
 	/**
-	* Returns videos by hero id
 		* @private
-		* @param {string | number} heroID - ID of champion
-		* @param {string | number} contentSize - Size of content requested
-		* @param {string | number} page - Number of pages
-		* @param { boolean } withPagination - If you want receive data with pagination
-		* @returns { object }
 	*/
 	async #heroVideosById (heroID = Number, withPagination = Boolean, contentSize = Number, page = Number) {
 		try {
@@ -113,9 +125,7 @@ class Heroes {
 	}
 
 	/**
- 	* Returns free week champions
 		* @private
-		* @returns { object }
 	*/
 	async #freeWeek () {
 		try {
